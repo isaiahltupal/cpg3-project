@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WEST GRILL - Reservation</title>
+    <link rel="stylesheet" href="../css/page03-ui.css">
+    <script src="../js/preorder.js" async></script>
+</head>
+
+<body id='bg'>
+
+	<div class="topnav">
+		<a id='topNavBtn' href='../Home.html' class='button'>Home</a>
+		<a id='topNavBtn' href='Menu.html' class='button'>Menu</a>
+		<a id='topNavBtn' href='Branches.html' class='button'>Branch List</a>
+    <a id='topNavBtn' href='Reservation.html' class='button'>Make Reservation</a>
+		<a id='topNavBtn' href='https://www.verywellfit.com/the-best-ways-to-eat-steak-on-a-diet-3495219' class='button'>Steak Facts</a>
+	</div>
+
+	<div class="headerText"> RESERVATION </div>
+
+	<div class="container">
+		<ul>
+		  <li>Full Name</li>
+		  <input type="text" id="fname" name="fname" placeholder="Juan S. De La Cruz"><br>
+		  <li>Phone Number</li>
+      <input type="tel" id="phone" name="phone" placeholder="0917-123-4567" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+		  <li>E-mail Address</li>
+		  <input type="email" id="email" name="email" placeholder="juandelacruz@gmail.com">
+		  <li>Reservation Date</li>
+		  <input type="date" id="date" name="date">
+		  <li>Reservation Time</li>
+      <input type="time" id="time" name="time" step="300">
+      <li>Number of Guest</li>
+      <input type="number" id="points" name="points" step="1" placeholder="2"><br><br>
+      <li>Your Order</li>
+      <table>
+        <tr>
+          <div class="order-row-main">
+            <th class="steakHeader"><span class="order-steak order-header order-column">STEAK</th>
+            <th class="steakHeader"><span class="order-price-main order-header order-column">PRICE</th>
+            <th class="steakHeader"><span class="order-quantity-main order-header order-column">QUANTITY</th>
+          </div>
+        </tr> 
+		
+        <tr>
+          <div class="order-menu">
+            <div class="order-row">
+              <div class="order-steak order-column">
+                <td>T-BONE</td>
+              </div>
+            <td><span class="order-price order-column">P 450.00</span></td>
+            <div class="order-quantity order-column">
+              <td><input class="order-quantity-input" type="number" value="0" oninput="updateTotal()">
+              <button class="button-remove" type="button" id = "0">REMOVE</button></td>
+            </div>
+			</div>
+          </div>
+        </tr>
+		
+		<tr>
+          <div class="order-menu">
+            <div class="order-row">
+              <div class="order-steak order-column">
+                <td>PORTER HOUSE</td>
+              </div>
+            <td><span class="order-price order-column">P 550.00</span></td>
+            <div class="order-quantity order-column">
+              <td><input class="order-quantity-input" type="number" value="0" oninput="updateTotal()">
+              <button class="button-remove" type="button" id = "1">REMOVE</button></td>
+            </div>
+			</div>
+          </div>
+        </tr>
+		
+        <tr>
+          <div class="order-menu">
+            <div class="order-row">
+              <div class="order-steak order-column">
+                <td>SIRLOIN</td>
+              </div>
+            <td><span class="order-price order-column">P 600.00</span></td>
+            <div class="order-quantity order-column">
+              <td><input class="order-quantity-input" type="number" value="0" oninput="updateTotal()">
+              <button class="button-remove" type="button" id = "2">REMOVE</button></td>
+            </div>
+			</div>
+          </div>
+        </tr>
+		
+        <tr>
+          <div class="order-menu">
+            <div class="order-row">
+              <div class="order-steak order-column">
+                <td>RIB EYE</td>
+              </div>
+            <td><span class="order-price order-column">P 550.00</span></td>
+            <div class="order-quantity order-column">
+              <td><input class="order-quantity-input" type="number" value="0" oninput="updateTotal()">
+              <button class="button-remove" type="button" id = "3">REMOVE</button></td>
+            </div>
+			</div>
+          </div>
+        </tr>
+		
+        <tr>
+          <div class="order-menu">
+            <div class="order-row">
+              <div class="order-steak order-column">
+                <td>KOBE</td>
+              </div>
+            <td><span class="order-price order-column">P 600.00</span></td>
+            <div class="order-quantity order-column">
+              <td><input class="order-quantity-input" type="number" value="0" oninput="updateTotal()">
+              <button class="button-remove" type="button" id = "4">REMOVE</button></td>
+            </div>
+			</div>
+          </div>
+        </tr>
+		
+        <tr>
+          <div class="order-menu">
+            <div class="order-row">
+              <div class="order-steak order-column">
+                <td>WAGYU</td>
+              </div>
+            <td><span class="order-price order-column">P 700.00</span></td>
+            <div class="order-quantity order-column">
+              <td><input class="order-quantity-input" type="number" value="0" oninput="updateTotal()">
+              <button class="button-remove" type="button" id = "5">REMOVE</button></td>
+            </div>
+			</div>
+          </div>
+        </tr>
+		
+        <br>
+        <tr>
+          <th class="potatoHeader">POTATOES</th>
+          <th class="potatoHeader">PRICE</th>
+          <th class="potatoHeader">QUANTITY</th>
+        </tr>
+		
+		<tr>
+          <div class="order-menu">
+            <div class="order-row">
+              <div class="order-steak order-column">
+                <td>BAKED</td>
+              </div>
+            <td><span class="order-price order-column">P 300.00</span></td>
+            <div class="order-quantity order-column">
+              <td><input class="order-quantity-input" type="number" value="0" oninput="updateTotal()">
+              <button class="button-remove" type="button" id = "6">REMOVE</button></td>
+            </div>
+			</div>
+          </div>
+        </tr>
+		
+        <tr>
+          <div class="order-menu">
+            <div class="order-row">
+              <div class="order-steak order-column">
+                <td>WEDGES</td>
+              </div>
+            <td><span class="order-price order-column">P 300.00</span></td>
+            <div class="order-quantity order-column">
+               <td><input class="order-quantity-input" type="number" value="0" oninput="updateTotal()">
+              <button class="button-remove" type="button" id = "7">REMOVE</button></td>
+            </div>
+			</div>
+          </div>
+        </tr>
+		
+        <tr>
+          <div class="order-menu">
+            <div class="order-row">
+              <div class="order-steak order-column">
+                <td>MASHED</td>
+              </div>
+            <td><span class="order-price order-column">P 300.00</span></td>
+            <div class="order-quantity order-column">
+              <td><input class="order-quantity-input" type="number" value="0" oninput="updateTotal()">
+              <button class="button-remove" type="button" id = "8">REMOVE</button></td>
+            </div>
+			</div>
+          </div>
+        </tr>
+		
+      </table>
+      <li class="cart-total-price">Total: </li>
+
+      <button type="button" onclick="confirmOrder()">Reserve Now</button>
+		</ul>
+	</div>
+  <!-- Confirmation popup -->
+  <div class="confirm_bg">
+    <span class="helper"></span>
+    <div class = "confirm">
+        <h2>Please confirm your Reservation</h2>
+
+        <span class = "reservation_info"> </span>
+
+        <span class = steak_span id="TBone">
+          <h5 class = confirm_steak>T - BONE</h5>
+          <h5 class = confirm_cost>P 540 </h5>
+        </span>
+
+        <span class = steak_span id="Porter House">
+          <h5 class = confirm_steak>Porter House</h5>
+          <h5 class = confirm_cost>P 540 </h5>
+        </span>
+
+        <span class = steak_span id="Sirloin">
+          <h5 class = confirm_steak>Sirloin</h5>
+          <h5 class = confirm_cost>P 540 </h5>
+        </span>
+
+        <span class = steak_span id="Ribeye">
+          <h5 class = confirm_steak>Ribeye</h5>
+          <h5 class = confirm_cost>P 540 </h5>
+        </span>
+
+        <span class = steak_span id="Kobe">
+          <h5 class = confirm_steak>Kobe</h5>
+          <h5 class = confirm_cost>P 540 </h5>
+        </span>
+
+        <span class = steak_span id="Wagyu">
+          <h5 class = confirm_steak>Wagyu</h5>
+          <h5 class = confirm_cost>P 540 </h5>
+        </span>
+
+        <span class = steak_span id="Baked potatoes">
+          <h5 class = confirm_steak>Baked Potatoes</h5>
+          <h5 class = confirm_cost>P 540 </h5>
+        </span>
+
+        <span class = steak_span id="">
+          <h5 class = confirm_steak>Potato Wedges</h5>
+          <h5 class = confirm_cost>P 540 </h5>
+        </span>
+
+        <span class = steak_span id="">
+          <h5 class = confirm_steak>Mash Potato</h5>
+          <h5 class = confirm_cost>P 540 </h5>
+        </span>
+        <h3>Total cost is <span class = "confirm_total">P 540</span></h3>
+        <button onclick="orderconfirmed()">Confirm</button>
+        <button onclick="cancelreserve()"></button>
+    </div>
+
+
+</div>
+</body>
+</html>

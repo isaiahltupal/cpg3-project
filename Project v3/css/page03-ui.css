@@ -1,0 +1,163 @@
+ /* custom fonts */
+@font-face {
+    font-family: 'Liberator-Heavy';
+    src: url('../assets/font/Liberator-Heavy.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Liberator-Light';
+    src: url('../assets/font/Liberator-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('../assets/font/Montserrat-Black.otf') format('opentype');
+}
+
+body, html{
+    margin: 0;
+    background-image: url('../assets/img/steak-bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* --- TOP NAVIGATOR --- */
+
+.topnav {
+    background-color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+    .topnav a{
+        text-align: center;
+        padding: 15px;
+
+        font-family: Liberator-Heavy;
+        color: #000;
+        font-size: 14px;
+        text-decoration: none;
+        letter-spacing: 0.4em;
+
+        transition: 0.3s;
+    }
+    .topnav a:hover {
+        color: #fff;
+        background-color: #000;
+    }
+
+/* header text - BRANCH LIST */
+
+.headerText{
+    background-color: #000;
+    text-align: center;
+    padding: 1.5em 0 0.2em 0;
+    margin: 1em;
+    width: 20%;
+    font-family: Liberator-Heavy;
+    font-size: 40px;
+    color: #fff;
+    letter-spacing: 0.2em;
+}
+
+.container{
+    padding: 1em 0em 1em 5em;
+    background-color: rgba(255, 250, 126, 0.8);
+    width: 70%;
+}
+
+    .container .branchHead{
+        font-family: Liberator-Heavy;
+        font-size: 40px;
+    }
+
+    .container li{
+        list-style-type:none;
+        font-family: Liberator-Light;
+        font-size: 36px;
+        padding: 0.50em;
+    }
+
+    input[type=text] {
+      width: 70%;
+      padding: 10px 20px;
+      margin: 8px 10;
+      box-sizing: border-box;
+    }
+
+    input[type=tel] {
+      width: 70%;
+      padding: 10px 20px;
+      margin: 8px 10;
+      box-sizing: border-box;
+    }
+
+    input[type=email] {
+      width: 70%;
+      padding: 10px 20px;
+      margin: 8px 10;
+      box-sizing: border-box;
+    }
+
+    input[type=date] {
+      width: 70%;
+      padding: 10px 20px;
+      margin: 8px 10;
+      box-sizing: border-box;
+    }
+
+    input[type=time] {
+      width: 70%;
+      padding: 10px 20px;
+      margin: 8px 10;
+      box-sizing: border-box;
+    }
+
+    input[type=number] {
+      width: 70%;
+      padding: 10px 20px;
+      margin: 8px 10;
+      box-sizing: border-box;
+    }
+    
+    .confirm_bg{
+        background:rgba(0,0,0,.4);
+        cursor:pointer;
+        display:none;
+        height:100%;
+        position:fixed;
+        text-align:center;
+        top:0;
+        width:100%;
+        z-index:10000;
+    }
+
+    .confirm{
+        background-color: rgb(255, 250, 126);
+        width: 500px;
+        margin:auto;
+        border-radius: 10px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-top: 40px;
+    }   
+
+    .confirm_steak{
+        display:inline-block;
+        margin-top: 4px;
+        padding:0px;
+    }
+
+    .confirm_cost{
+        display:inline-block;
+        padding:0px;
+    }
+
+    .steak_span{
+        color:rgb(59, 57, 52);
+        padding : 0px;
+        margin:0px;
+        height:30px;
+    }
